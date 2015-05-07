@@ -1,0 +1,228 @@
+body{
+	margin: 50px;
+}
+#title-block{
+	width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.naviC > a:link,
+.naviC > a:active,
+.naviC > a:visited {
+	color: #bcbcbc;
+}
+
+.naviC > a:hover{
+	color: #888888;
+}
+
+#preview{
+	padding-top: 0.1%;
+	text-align: center;
+}
+
+#features{
+	clear: both;
+	width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	border-top: 1px solid #dcdcdc;
+	margin-top: 2%;
+}
+
+#features-title{
+	margin-left: 100px;
+}
+
+.sectionBlock{
+	position:relative;
+	width:85%;
+	height:100%;
+	margin:30px auto;
+}
+
+.secSub{
+	float:left;
+	width:25%;
+	text-align: center;
+	margin: 30px;
+}
+
+#gallery{
+	clear: both;
+	width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	border-top: 1px solid #dcdcdc;
+	margin-top: 2%;
+}
+
+#gallery-title{
+	margin-left: 100px;
+}
+
+.subtitle{
+	color:#bcbcbc;
+}
+
+.galleryText{
+	margin-top: 20px;
+}
+
+#ModMenu{
+	clear: both;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+div#centerDiv {
+	width: auto;
+	text-align: center;
+}
+
+#ModMenuHolder li {
+	display: inline;
+	text-align: center;
+	margin-left: 50px;
+}
+
+.navbar .navbar-nav {
+	display: inline-block;
+	float: none;
+	vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+	text-align: center;
+}
+
+#playground{
+	width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#CtrlPannel{
+	width: 20%;
+	float: left;
+	margin: 40px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-top: 30px;
+}
+
+#CtrlText{
+	margin: 40px;
+	margin-top: 23px;
+}
+
+#previewPlay{
+	float: right;
+}
+
+.btn-group{
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.btn-alter{
+	width: 130px;
+}
+
+#Frames{
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 165px;
+
+}
+
+.btn-alter2{
+	width: 165px;
+}
+
+#Iniciate{
+	margin-top: 60px;
+}
+
+#cultureBlock{
+	margin-top: 60px;
+
+}
+
+#myCarousel{
+	width: 800px;
+	height: 600px;
+	float: left;
+	margin-left: 40px;
+   margin-bottom: 5%;
+}
+
+#reference{
+	clear: both;
+	width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	border-top: 1px solid #dcdcdc;
+	margin-top: 2%;
+}
+
+#reference-title{
+	margin-left: 100px;
+}
+
+#reference-des{
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	float: right;
+}
+
+#galleryAlt{
+	clear: both;
+	width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+}
+
+#Bar{
+	margin-left: 40px;
+}
+
+#container{
+	margin: 40px;
+	margin-top:70px;
+	float: right;
+}
+
+#gifCtrl{
+	width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#CtrlPannelAlt{
+	width: 20%;
+	float: left;
+	margin: 40px;
+	margin-right: 0px;
+	padding-top: 30px;
+}
+
+#Send{
+	margin: 15px;
+	margin-top: 40px;
+}
+
+#sendText{
+	width: 250px;
+}
+
+
