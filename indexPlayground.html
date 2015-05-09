@@ -28,7 +28,7 @@
 			<ul class="nav navbar-nav" id = "ModMenuHolder">
 				<li class="ModSel"><a class="naviC" id="0" href="#">Pop Art</a></li>
 				<li class="ModSel"><a class="naviC" id="1" href="#">Ink Splitter</a></li>
-				<li class="ModSel"><a class="naviC" id="2" href="#">Textile</a></li>
+				<li class="ModSel"><a class="naviC" id="2" href="#">Cocoon</a></li>
 				<li class="ModSel"><a class="naviC" id="3" href="#">Gradual Change</a></li>
 				<li class="ModSel"><a class="naviC" id="4" href="#">Frames</a></li>
 				<li class="ModSel"><a class="naviC" id="5" href="#">Replay</a></li>
@@ -47,6 +47,18 @@
 
 		<div id = "CtrlText">
 			<p class = "subtitle" id = "CtrlTextContent"></p>
+		</div>
+
+		<div class="btn-group" id = "PicMOD">
+			<button type="button" class="btn btn-default btn-lg btn-alter" id = "PicCur" value = 0>Color</button>
+			<button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+				<span class="caret"></span>
+				<span class="sr-only">Toggle Dropdown</span>
+			</button>
+			<ul class="dropdown-menu" role="menu" id = "PicSelect">
+				<li  value = 0 ><a href="#">Color</a></li>
+				<li  value = 1 ><a href="#">Black</a></li>
+			</ul>
 		</div>
 
 		<div class="btn-group" id = "FigureMOD">
@@ -242,7 +254,7 @@
 			</p>
 		</div>
 		<div class = "secSub">
-			<img src="./img/main/placeH.gif"  alt="placeH" height="200" id="eg5">
+			<img src="./img/main/placeH.gif"  alt="placeH" height="200" width = "276" id="eg5">
 			<p class="galleryText">
 				<span></span>
 			</p>

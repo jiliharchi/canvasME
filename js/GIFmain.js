@@ -28,6 +28,7 @@ FrameC = parseInt(FrameC);
 if(isNaN(FrameC) || FrameC==0) FrameC = 1;
 var PapMod=getParameter('PapMod');
 var PatMod=getParameter('PatMod');
+var PicMod=getParameter('PicMod');
 
 //GIF setup
 var progress = document.getElementById( 'progress' );
@@ -1055,7 +1056,40 @@ function StartGifing() {
     gifer=new GifGenerator();
 }
 
+
 function GifGenerator() {
+    var sizeGIF =  $("#GIFSizeCur").val()
+    var sizeW = 0;
+    var sizeH = 0;
+    if(sizeGIF == 0){
+        sizeW = 640;
+        sizeH = 480;
+    }
+    else if(sizeGIF == 1){
+        sizeW = 384;
+        sizeH = 288;
+    }
+    else if(sizeGIF == 2){
+        sizeW = 200;
+        sizeH = 150;
+    }
+    else if(sizeGIF == 3){
+        sizeW = 100;
+        sizeH = 75;
+    }
+    else if(sizeGIF == 4){
+        sizeW = 40;
+        sizeH = 30;
+    }
+    var ColorDivNum=$("#colorDivNum").val();
+    ColorDivNum = parseInt(ColorDivNum);
+    if(isNaN(ColorDivNum) || ColorDivNum==0 || ColorDivNum==1){
+        ColorDivNum = 2;
+    }
+    else if(ColorDivNum > 128){
+        ColorDivNum = 128;
+    }
+
     generating = true;
     var current = 0;
     var total = 100;
@@ -1077,9 +1111,14 @@ function GifGenerator() {
         var data = context.getImageData( 0, 0, canvas.width, canvas.height ).data;
         var palette = [];
         for ( var j = 0, k = 0, jl = data.length; j < jl; j += 4, k ++ ) {
-            var r = Math.floor( data[ j + 0 ] * 0.1 ) * 10;
-            var g = Math.floor( data[ j + 1 ] * 0.1 ) * 10;
-            var b = Math.floor( data[ j + 2 ] * 0.1 ) * 10;
+           // var r = Math.floor( data[ j + 0 ] * 0.1 ) * 10;
+           // var g = Math.floor( data[ j + 1 ] * 0.1 ) * 10;
+           // var b = Math.floor( data[ j + 2 ] * 0.1 ) * 10;
+
+            var r = Math.floor( data[ j + 0 ] / ColorDivNum ) * ColorDivNum;
+            var g = Math.floor( data[ j + 1 ] / ColorDivNum ) * ColorDivNum;
+            var b = Math.floor( data[ j + 2 ] / ColorDivNum ) * ColorDivNum;
+
             var color = r << 16 | g << 8 | b << 0;
             var index = palette.indexOf( color );
             if ( index === -1 ) {
@@ -1101,6 +1140,8 @@ function GifGenerator() {
         else {
             var powof2 = 1;
             while (powof2 < palette.length) powof2 <<= 1;
+
+            if (powof2>256) powof2=256;
             palette.length = powof2;
             //palette.length = 4;
         }
@@ -1123,17 +1164,30 @@ function GifGenerator() {
         }
         var image = document.createElement( 'img' );
         image.src = 'data:image/gif;base64,' + btoa( string );
+
+        image.id="theImage";
+        if(sizeGIF != 0){
+            $("#output").addClass("imgDivShift");
+        }
         document.getElementById("output").appendChild( image );
+        $("#theImage").width(sizeW);
+        $("#theImage").height(sizeH);
+
         generating = false;
         $( "#Redo").show();
         $( "#output").show();
         $( "#Send").show();
         $( "#Iniciate").hide();
         $( "#Bar").hide();
+        $( "#colorDiv").hide();
+        $( "#GIFSize").hide();
+
         animate();
 
 
     }
 }
 
+
+//kinematographer
 

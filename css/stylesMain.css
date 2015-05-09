@@ -198,6 +198,7 @@ div#centerDiv {
 
 #container{
 	margin: 40px;
+	margin-right: 0px;
 	margin-top:70px;
 	float: right;
 }
@@ -212,6 +213,7 @@ div#centerDiv {
 	width: 20%;
 	float: left;
 	margin: 40px;
+	margin-left: 0px;
 	margin-right: 0px;
 	padding-top: 30px;
 }
@@ -221,8 +223,15 @@ div#centerDiv {
 	margin-top: 40px;
 }
 
-#sendText{
+#myEmail{
 	width: 250px;
 }
 
+#colorDiv{
+	margin-left: 30px;
+}
+
+.imgDivShift{
+	margin-left: 30px;
+}
 

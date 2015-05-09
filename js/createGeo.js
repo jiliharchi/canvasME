@@ -1679,9 +1679,20 @@ function DrawImpact(){
         for(var i = 0; i < Count;i++){
             this.Geo.push(new THREE.PlaneBufferGeometry( 200, 200 ));
         }
-        var map00 = THREE.ImageUtils.loadTexture( "./img/00Pow.png" );
-        var map01 = THREE.ImageUtils.loadTexture( "./img/01Pow.png" );
-        var map02 = THREE.ImageUtils.loadTexture( "./img/02Pow.png" );
+        var map00;
+        var map01;
+        var map02;
+        if(PicMod == 0){
+            map00 = THREE.ImageUtils.loadTexture( "./img/00Pow.png" );
+            map01 = THREE.ImageUtils.loadTexture( "./img/01Pow.png" );
+            map02 = THREE.ImageUtils.loadTexture( "./img/02Pow.png" );
+        }
+        else if(PicMod == 1){
+            map00 = THREE.ImageUtils.loadTexture( "./img/00PowAlt.png" );
+            map01 = THREE.ImageUtils.loadTexture( "./img/01PowAlt.png" );
+            map02 = THREE.ImageUtils.loadTexture( "./img/02PowAlt.png" );
+        }
+
         var mapColle = [map00,map01,map02];
         var mapSel;
         var Dice = Math.random();
@@ -1928,7 +1939,13 @@ function DrawImpactDynamic(AnchorAcc,AnchorP,DrawImpact){
 function DrawExplode(){
     if(Gate == 0){
         this.Geo = new THREE.PlaneBufferGeometry( 500, 500 );
-        var map00 = THREE.ImageUtils.loadTexture( "./img/03Pow.png" );
+        var map00;
+        if(PicMod == 0){
+            map00 = THREE.ImageUtils.loadTexture( "./img/03Pow.png" );
+        }
+        else if(PicMod == 1){
+            map00 = THREE.ImageUtils.loadTexture( "./img/03PowAlt.png" );
+        }
         var material1 = new THREE.MeshBasicMaterial( { map: map00 } );
         material1.transparent = true;
         material1.blending = THREE[ "NormalBlending" ];
@@ -3116,30 +3133,30 @@ function SkeMeshDynamicShift(AnchorAcc,SkeFromKinect,SkeMesh){
             for ( var i = SkeMesh.Struct.length-1; i >= 0; i -- ) {
                 SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-4 ] = 0.8 + AnchorAccCol;
                 SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-3 ] = 0.8 + AnchorAccCol;
-                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-2 ] = 0.8;
+                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-2 ] = 0.2;
                 SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-1 ] = 1;
             }
         }
         else if( ColorT1 == 1 &&  ColorT2 == 0){
             for ( var i = SkeMesh.Struct.length-1; i >= 0; i -- ) {
                 SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-4 ] = 0.8 + AnchorAccCol;
-                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-3 ] = 0.8;
-                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-2 ] = 0.8;
+                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-3 ] = 0.2;
+                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-2 ] = 0.2;
                 SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-1 ] = 1;
             }
         }
         else if( ColorT1 == 0 &&  ColorT2 == 1){
             for ( var i = SkeMesh.Struct.length-1; i >= 0; i -- ) {
-                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-4 ] = 0.8;
+                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-4 ] = 0.2;
                 SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-3 ] = 0.8 + AnchorAccCol;
-                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-2 ] = 0.8;
+                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-2 ] = 0.2;
                 SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-1 ] = 1;
             }
         }
         else if( ColorT1 == 0 &&  ColorT2 == 0){
             for ( var i = SkeMesh.Struct.length-1; i >= 0; i -- ) {
-                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-4 ] = 0.8;
-                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-3 ] = 0.8;
+                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-4 ] = 0.2;
+                SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-3 ] = 0.2;
                 SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-2 ] = 0.8 + AnchorAccCol;
                 SkeMesh.ColH.array[ (SkeMesh.Count - i)*4-1 ] = 1;
             }

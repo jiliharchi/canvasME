@@ -28,6 +28,7 @@ FrameC = parseInt(FrameC);
 if(isNaN(FrameC) || FrameC==0) FrameC = 1;
 var PapMod=getParameter('PapMod');
 var PatMod=getParameter('PatMod');
+var PicMod=getParameter('PicMod');
 
 // three.js setup/////////////////////////////////////////////////////////////////
 var container, stats;

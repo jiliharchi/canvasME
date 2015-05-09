@@ -10,6 +10,8 @@
 	<script src="./js/lib/Detector.js"></script>
 	<script src="./js/lib/three.min.js"></script>
 	<script src="./js/lib/omggif.js"></script>
+	<script src="./js/lib/bootstrap.js"></script>
+	<script src="./js/lib/dropdown.js"></script>
 
 </head>
 <body onload="Iniciate()">
@@ -26,6 +28,26 @@
 
 <div id = "gifCtrl">
 	<div id = "CtrlPannelAlt">
+
+		<div class="input-group" id="colorDiv">
+			<input type="number" class="form-control" placeholder="Color Division" aria-describedby="basic-addon2" id = "colorDivNum">
+		</div>
+
+		<div class="btn-group"  id = "GIFSize">
+			<button type="button" class="btn btn-default btn-lg btn-alter" id = "GIFSizeCur" value = 0>640 x 480</button>
+			<button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+				<span class="caret"></span>
+				<span class="sr-only">Toggle Dropdown</span>
+			</button>
+			<ul class="dropdown-menu" role="menu" id = "GIFSizeSelect">
+				<li value = 0><a href="#">640 x 480</a></li>
+				<li value = 1><a href="#">384 x 288</a></li>
+				<li value = 2><a href="#">200 x 150</a></li>
+				<li value = 3><a href="#">100 x 75</a></li>
+				<li value = 4><a href="#">40 x 30</a></li>
+			</ul>
+		</div>
+
 		<div class="btn-group" id="Iniciate">
 			<button type="button" class="btn btn-default  btn-alter2" id = "GIFSt" onclick="StartGifing()">GIF Start</button>
 		</div>
@@ -34,13 +56,13 @@
 			<progress id="progress" value="0" max="1"></progress><br>
 		</div>
 
-		<div id="output" width="500" height="500"></div>
+		<div id="output"></div>
 
 		<div class="col-lg-6" id = "Send">
 			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Email address ..." id = "sendText">
+				<input type="text" class="form-control" placeholder="Email address ..." id = "myEmail">
                 <span class="input-group-btn">
-                  <button class="btn btn-default" type="button"  id = "SendEmail">Send</button>
+                  <button class="btn btn-default" type="button"  id = "SendEmail" onclick="sendMail()">Send</button>
                 </span>
 			</div><!-- /input-group -->
 		</div><!-- /.col-lg-6 -->
