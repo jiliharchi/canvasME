@@ -24,7 +24,7 @@ var egPic1 = ["./img/gallery/b00.gif","./img/gallery/b01.gif","./img/gallery/b02
 
 var refPic2 = ["./img/main/ref8.jpg","./img/main/ref9.jpg","./img/main/ref10.jpg","./img/main/ref11.jpg"];
 var refTitle2 = "Concept art of cocoon";
-var refTxt2 = "As its unique visual features, cocoon and its textile are common language to express trends, dynamics and reactions. It is widely used in various design fields such as architeture, installation, fashion and concept arts. Its interactions with hands and arms relate to Tai Chi, which imaginate the force ('Qi', as refered by Chinese culture) follows your motions.";
+var refTxt2 = "As its unique visual features, cocoon and its textile are common language to express trends, dynamics and reactions. It is widely used in various design fields such as architecture, installation, fashion and concept arts. Its interactions with hands and arms relate to Tai Chi, which imagine the force ('Qi', as refered by Chinese culture) follows your motions.";
 var egPic2 = ["./img/gallery/c00.gif","./img/gallery/c01.gif","./img/gallery/c02.gif","./img/gallery/c03.gif","./img/gallery/c04.gif","./img/gallery/c05.gif"];
 
 var refPic3 = ["./img/main/ref12.jpg","./img/main/ref13.jpg","./img/main/ref14.jpg","./img/main/ref15.jpg"];
